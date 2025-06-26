@@ -1,6 +1,29 @@
 // app/admin/page.tsx
 
 export default function LeadPanel() {
+
+  const stats = [
+    {
+      title: "Total Projects",
+      value: 12,
+      description: "Across All Domain",
+    },
+    {
+      title: "Total Projects",
+      value: 12,
+      description: "Across All Domain",
+    },
+    {
+      title: "Total Projects",
+      value: 12,
+      description: "Across All Domain",
+    },
+    {
+      title: "Total Projects",
+      value: 12,
+      description: "Across All Domain",
+    },
+  ];
   return (
     <div className="pl-2 py-8">
       <h2 className="text-3xl font-bold mb-2 pt-10 ">Welcome back, Team Lead</h2>
@@ -8,31 +31,16 @@ export default function LeadPanel() {
         Manage all domains, projects, and team members
       </p>
       {/* Your dashboard stats and other content go here */}
-
-      <div className="grid grid-cols-4 gap-6 mb-8">
+       <div className="grid grid-cols-4 gap-6 mb-8">
+      {stats.map((stat, idx) => (
+        
         <div className="bg-[#4d4d53] border border-gray-600 rounded-lg p-6">
-          <div className="text-white text-sm font-semibold mb-2">Total Projects</div>
-          <div className="text-white text-2xl font-bold">12</div>
-          <div className="text-white text-xs">Across All Domain</div>
+          <div key ={idx}className="text-white text-sm font-semibold mb-2">{stat.title}</div>
+          <div className="text-white text-2xl font-bold">{stat.value}</div>
+          <div className="text-white text-xs">{stat.description}</div>
         </div>
-
-        <div className="bg-[#4d4d53] border border-gray-600 rounded-lg p-6">
-          <div className="text-white text-sm font-semibold mb-2">Total Projects</div>
-          <div className="text-white text-2xl font-bold">12</div>
-          <div className="text-white text-xs">Across All Domain</div>
-        </div>
-
-        <div className="bg-[#4d4d53] border border-gray-600 rounded-lg p-6">
-          <div className="text-white text-sm font-semibold mb-2">Total Projects</div>
-          <div className="text-white text-2xl font-bold">12</div>
-          <div className="text-white text-xs">Across All Domain</div>
-        </div>
-
-        <div className="bg-[#4d4d53] border border-gray-600 rounded-lg p-6">
-          <div className="text-white text-sm font-semibold mb-2">Total Projects</div>
-          <div className="text-white text-2xl font-bold">12</div>
-          <div className="text-white text-xs">Across All Domain</div>
-        </div>
+      ))}
+      
 
         
         
